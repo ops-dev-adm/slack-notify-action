@@ -7,7 +7,7 @@ const moment = require('moment');
         const request = {
             url: 'https://hooks.slack.com/services/'+process.env.SLACK_DEPLOYMENT_HOOK, 
             method: 'POST',
-            data: { text: `New deployment for ${process.env.SHA} at ${moment().format('DD/MM/YYYY HH:mm:ss')} on ${proccess.env.REPOSITORY} by ${proccess.env.ACTOR}`},
+            data: { text: `New deployment for ${process.env.SHA} at ${moment().format('DD/MM/YYYY HH:mm:ss')} on ${process.env.REPOSITORY} by ${process.env.ACTOR}`},
             headers: {
                 'Content-type': 'application/json'
             }
