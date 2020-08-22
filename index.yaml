@@ -1,0 +1,5 @@
+name: 'Slack Deployment Notification'
+description: 'Send one notification to the deployment channel'
+runs:
+  using: 'node12'
+  main: 'index.js'
