@@ -5,7 +5,7 @@ const moment = require('moment');
 (async () => {
     if(process.env.SLACK_DEPLOYMENT_HOOK) {
 
-        const repoLink = `<https://github.com/${process.env.REPOSITORY}/commit/${process.env.SHA}|${process.env.SHA}>`
+        const repoLink = `<https://github.com/${process.env.REPOSITORY}/commit/${process.env.SHA}|${(process.env.SHA).substring(0,12)}>`
         const request = {
             url: 'https://hooks.slack.com/services/'+process.env.SLACK_DEPLOYMENT_HOOK, 
             method: 'POST',
